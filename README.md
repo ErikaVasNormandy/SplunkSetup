@@ -99,6 +99,43 @@ Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 cgrou
 Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 libltdl7 amd64 2.4.6-2 [38.8 kB]
 Get:5 https://download.docker.com/linux/ubuntu bionic/stable amd64 containerd.io amd64 1.2.6-3 [22.6 MB]
 Get:6 https://download.docker.com/linux/ubuntu bionic/stable amd64 docker-ce-cli amd64 5:19.03.1~3-0~ubuntu-bionic [42.5 MB]
-Get:7 https://download.docker.com/linux/ubuntu bionic/stable amd64 docker-ce amd64 5:19.03.1~3-0~ubuntu-bionic [22.7 MB]```
+Get:7 https://download.docker.com/linux/ubuntu bionic/stable amd64 docker-ce amd64 5:19.03.1~3-0~ubuntu-bionic [22.7 MB]
+```
+> root@ip-172-31-31-207:/etc/apt# sudo systemctl status docker
+```docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: e
+   Active: active (running) since Sun 2019-08-04 05:39:12 UTC; 4min 28s ago
+     Docs: https://docs.docker.com
+ Main PID: 8533 (dockerd)
+    Tasks: 24
+   CGroup: /system.slice/docker.service
+           └─8533 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/contain
+ ```
+         
+ ### 3. Pull Splunk Image
+ https://docs.splunk.com/Documentation/Splunk/7.3.0/Installation/DeployandrunSplunkEnterpriseinsideDockercontainers
+> docker pull splunk/splunk:latest
+```latest: Pulling from splunk/splunk
+f5d23c7fed46: Pull complete
+3ad86e920aec: Pull complete
+... 
+Digest: sha256:ffab00f77a8f866975d8f926ebd6f63a58b52744
+Status: Downloaded newer image for splunk/splunk:latest
+docker.io/splunk/splunk:latest
+```
+> docker run -d -p 8000:8000 -e 'SPLUNK_START_ARGS=--accept-license' -e 'SPLUNK_PASSWORD=<password>' splunk/splunk:latest
+``` Container ID: 
+  b062256f0976a507c93898f4e36210479149fb688bfb83ad2ccef8fc 
+```
+  The default account for Splunk is ```python admin ```, and in here you specify the password with docker run 
  
-        
+> docker ps -a -f <Container ID>
+```
+CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                             PORTS                                                                           NAMES
+b062256f0976        splunk/splunk:latest   "/sbin/entrypoint.sh…"   18 seconds ago      Up 17 seconds (health: starting)   8065/tcp, 8088-8089/tcp, 8191/tcp, 9887/tcp, 0.0.0.0:8000->8000/tcp, 9997/tcp   brave_keller
+root@ip-172-31-8-185:/home/ubuntu#
+  ```
+
+ 
+
+
