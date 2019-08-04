@@ -21,8 +21,20 @@ A list of notes on how to setup Splunk-Docker with a community license
 > --> Make sure you apply the networking rules correctly to this, Splunk runs on port 8000, 8089, and 9997
 > 2. Install Docker on Ubuntu
 > 3. Install Splunk image
+--- 
 
-### 1. Spin Up Virtual Host
+### 0. Request Developer License
+https://www.splunk.com/page/sign_up/developer_license?redirecturl=http://dev.splunk.com/page/developer_license_sign_up/
+This can take "1-3 business days but I got mine in a week after sending an inquiry to devinfo@splunk.com
+"A 10GB for non-customers that goes through an approval process"
+
+### 1. Spin Up Virtual Host 
+For me I used AWS Instance c5.18xlarge, 144 GIB memory. AWS has dedicated documentation for Splunk ( https://aws-quickstart.s3.amazonaws.com/quickstart-splunk-enterprise/doc/splunk-enterprise-on-the-aws-cloud.pdf )
+| Instance Type       | Daily Indexing Volume       | Users  |
+| ------------- |:-------------:| -----:|
+| c4.2xlarge   | <100 | <8? |
+| c4.4xlarge    | 100-200    |   8? |
+| c4.8xlarge | 200-300+     |    16? |
 
 
 
