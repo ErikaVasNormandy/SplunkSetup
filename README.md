@@ -52,12 +52,27 @@ Docker had some pretty specific instructions for Ubuntu. Digital Ocean's walkthr
 Docker's documentation: 
 Digital Ocean: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
 
-sudo apt-get remove docker docker-engine docker.io containerd runc
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-sudo apt-get update
-apt-cache policy docker-ce
+> sudo apt-get remove docker docker-engine docker.io containerd runc
+> sudo apt install apt-transport-https ca-certificates curl software-properties-common
+> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+> sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+```
+Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease
+0% [1 InRelease gpgv 242 kB] [Connecting to security.ubuntu.com (91.189.88.149)]
+Get:4 https://download.docker.com/linux/ubuntu bionic InRelease [64.4 kB]
+Hit:5 http://security.ubuntu.com/ubuntu bionic-security InRelease
+```
+> sudo apt-get update
+```
+Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Hit:4 https://download.docker.com/linux/ubuntu bionic InRelease
+Hit:5 http://security.ubuntu.com/ubuntu bionic-security InRelease
+```
+> apt-cache policy docker-ce
 ```docker-ce:
   Installed: (none)
   Candidate: 5:19.03.1~3-0~ubuntu-bionic
@@ -66,9 +81,8 @@ apt-cache policy docker-ce
         500 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages
      5:19.03.0~3-0~ubuntu-bionic 500
         500 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages
- ```
- 
-sudo apt install docker-ce       
+```
+> sudo apt install docker-ce       
 ```
 Reading state information... Done
 The following additional packages will be installed:
