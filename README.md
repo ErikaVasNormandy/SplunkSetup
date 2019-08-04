@@ -37,6 +37,6 @@ For me I used AWS Instance **c5.18xlarge**, 144 GIB memory. AWS has dedicated do
 
 This was the table for **indexers**, but you can use them as a guidelines for ideas on what hardware requirements
 ###### Networking Rules
-![](image.png =100x20)
+![](image.png=100x20)
 
 
