@@ -1,4 +1,6 @@
-# SplunkSetup
+# Splunk Setup
+
+Splunk isn't *that* hard to setup, but there are a couple of small details to keep in mind
 
 Links:
 ```
@@ -20,7 +22,7 @@ A list of notes on how to setup Splunk-Docker with a community license
 > 2. Install Docker on Ubuntu
 > 3. Install Splunk image
 
-# 1. Spin Up Virtual Host
+### 1. Spin Up Virtual Host
 
 
 
