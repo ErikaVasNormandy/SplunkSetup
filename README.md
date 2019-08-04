@@ -140,5 +140,5 @@ root@ip-172-31-8-185:/home/ubuntu#
   ```
 
  
-
+Navigate to <ec2 instance ip or dns>:8000
 
