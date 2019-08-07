@@ -130,7 +130,7 @@ docker.io/splunk/splunk:latest
 ``` Container ID: 
   b062256f0976a507c93898f4e36210479149fb688bfb83ad2ccef8fc 
 ```
-  The default account for Splunk is ```python admin ```, and in here you specify the password with docker run 
+  The default account for Splunk is ```admin ```, and in here you specify the password with docker run 
  
 > docker ps -a -f <Container ID>
 ```
@@ -141,4 +141,26 @@ root@ip-172-31-8-185:/home/ubuntu#
 
  
 Navigate to <ec2 instance ip or dns>:8000
+### 4. Reviving it on Start
+
+> sudo docker image ls
+```
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+splunk/splunk       latest              b771ccc31b0a        7 days ago          1.28GB
+```
+> erso@Rogue-One:~$ sudo docker ps -a
+```
+CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                        PORTS               NAMES
+ddfd98720faf        splunk/splunk:latest   "/sbin/entrypoint.sh…"   24 minutes ago      Exited (143) 10 minutes ago                       vibrant_wozniak
+51d75c61e93d        splunk/splunk:latest   "/sbin/entrypoint.sh…"   39 minutes ago      Exited (143) 28 minutes ago                       eloquent_mcnulty
+75e9342f878e        b771ccc31b0a           "/sbin/entrypoint.sh…"   41 minutes ago      Exited (1) 41 minutes ago                         inspiring_kepler
+1f9cbec85d5c        splunk/splunk:latest   "/sbin/entrypoint.sh…"   47 hours ago        Exited (143) 2 hours ago                          busy_chandrasekhar
+```
+> sudo docker start ddfd98720faf   
+```
+ddfd98720faf
+```
+
+
+
 
