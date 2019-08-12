@@ -1,3 +1,14 @@
+
+# Splunk Setup
+
+Standard B2s (2 vcpus, 4 GiB memory)
+https://www.splunk.com/en_us/download/splunk-enterprise/thank-you-enterprise.html
+wget -O splunk-7.3.1-bd63e13aa157-linux-2.6-amd64.deb 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=7.3.1&product=splunk&filename=splunk-7.3.1-bd63e13aa157-linux-2.6-amd64.deb&wget=true'
+dpkg -i splunk-7.3.1-bd63e13aa157-linux-2.6-amd64.deb       
+[sudo] $SPLUNK_HOME/bin/splunk enable boot-start 
+./splunk start --accept-license
+
+
 # Splunk Setup
 
 Splunk isn't *that* hard to setup, but there are a couple of small details to keep in mind
