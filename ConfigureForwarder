@@ -4,6 +4,10 @@ https://answers.splunk.com/answers/516533/cannot-see-universal-forwarder-from-sp
 
 https://geek-university.com/splunk/configure-a-splunk-forwarder-on-linux/
 
+https://docs.splunk.com/Documentation/Forwarder/7.3.1/Forwarder/Enableareceiver
+
+https://docs.splunk.com/Documentation/Forwarder/7.3.1/Forwarder/Uninstalltheuniversalforwarder
+
 Do you agree with this license? [y/n]: y
 
 This appears to be your first time running this version of Splunk.
