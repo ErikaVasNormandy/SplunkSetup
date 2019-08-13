@@ -8,10 +8,10 @@ Would you like to enter a view-only password (y/n)? y
 Password:
 Verify:
 
-New 'SnowberryPie.hryuvwz3vxbujh3sryidq54yic.xx.internal.cloudapp.net:1 (sekiro)' desktop at :1 on machine SnowberryPie.hryuvwz3vxbujh3sryidq54yic.xx.internal.cloudapp.net
+New 'udapp.net:1 (sekiro)' desktop at :1 on machine SnowberryPc.xx.internal.cloudapp.net
 
 Starting applications specified in /etc/X11/Xvnc-session
-Log file is /home/sekiro/.vnc/SnowberryPie.hryuvwz3vxbujh3sryidq54yic.xx.internal.cloudapp.net:1.log
+Log file is /home/sekiro/.vnc/SnowberryPie.hryuvwz3vq54yic.xx.internal.cloudapp.net:1.log
 
 Use xtigervncviewer -SecurityTypes VncAuth -passwd /home/sekiro/.vnc/passwd :1 to connect to the VNC server.
 
