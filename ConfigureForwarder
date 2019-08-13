@@ -1,1 +1,27 @@
 https://answers.splunk.com/answers/726703/how-can-i-configure-the-universal-forwarder-in-doc.html
+
+https://answers.splunk.com/answers/516533/cannot-see-universal-forwarder-from-splunk-enterpr.html
+
+https://geek-university.com/splunk/configure-a-splunk-forwarder-on-linux/
+
+Do you agree with this license? [y/n]: y
+
+This appears to be your first time running this version of Splunk.
+
+Splunk software must create an administrator account during startup. Otherwise, you cannot log in.
+Create credentials for the administrator account.
+Characters do not appear on the screen when you type in credentials.
+
+Please enter an administrator username: admin
+Password must contain at least:
+   * 8 total printable ASCII character(s).
+Please enter a new password: 
+Please confirm new password:
+Init script installed at /etc/init.d/splunk.
+Init script is configured to run at boot.
+root@SnowberryPie:/opt/splunkforwarder/bin# ./splunk add forward-server 51.143.11.166:9997 -auth admin:changeme
+Added forwarding to: 51.143.11.166:9997.
+root@SnowberryPie:/opt/splunkforwarder/bin#
+
+./splunk add monitor /var/log/messages
+
